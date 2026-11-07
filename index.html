@@ -179,8 +179,42 @@ body.invitation-open .music-toggle{display:flex}
 @media (max-width:620px) and (max-height:520px){
   #royalEntry .gate{height:calc((100dvh - 80px) * .9)!important;}
 }
+</style><style>
+/* Open Invitation sits directly over the central brass door handles. */
+#royalEntry #royalGate{position:relative!important;}
+#royalEntry #royalGate #royalOpenBtn{
+ position:absolute!important;top:54%!important;bottom:auto!important;left:50%!important;
+ transform:translate(-50%,-50%)!important;margin:0!important;
+ z-index:50!important;display:block!important;width:max-content;max-width:calc(100% - 20px);
+ min-height:44px!important;padding:10px clamp(12px,3vw,22px)!important;
+ font-size:clamp(10px,2.6vw,13px)!important;line-height:1.3;
+ background:linear-gradient(135deg,#593025,#783d68 60%,#593025)!important;
+ border:2px solid #e8c27c!important;box-shadow:0 4px 18px #170b0ac0!important;
+ white-space:nowrap;cursor:pointer;
+}
+#royalEntry #royalGate #royalOpenBtn:active{transform:translate(-50%,-50%) scale(.97)!important;}
+#royalEntry #royalGate.open #royalOpenBtn{opacity:0!important;pointer-events:none!important;}
+</style><style id="mobile-welcome-fix">
+/* Welcome follows the opening/name reveal automatically, with phone-safe spacing. */
+#home{scroll-margin-top:0;}
+#home .ganesh,#home .ornament,#home .eyebrow,#home .intro,#home h1{overflow-wrap:normal;}
+@media(max-width:620px){
+ #home.hero{min-height:100svh;min-height:100dvh;padding:clamp(60px,9svh,95px) 22px 50px;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+ #home .ganesh{font-size:clamp(17px,4.6vw,22px);}
+ #home h1{font-size:clamp(54px,14vw,82px);line-height:1.04;margin:20px 0 10px;max-width:100%;}
+ #home .amp{font-size:clamp(28px,8vw,42px);margin:0;}
+ #home .intro{font-size:clamp(18px,5vw,23px);line-height:1.3;margin:12px auto;}
+ #home .ornament{margin:10px auto;}
+ #home .scroll-cue{margin-top:18px;}
+}
+@media(max-width:370px){#home.hero{padding-left:15px;padding-right:15px}#home h1{font-size:clamp(48px,13.5vw,60px)}}
+@media(prefers-reduced-motion:no-preference){
+ #home.welcome-arrived .ganesh,#home.welcome-arrived .ornament,#home.welcome-arrived .eyebrow,#home.welcome-arrived .intro,#home.welcome-arrived h1{animation:welcomeRise .7s ease-out both;}
+ #home.welcome-arrived h1{animation-delay:.2s}
+ @keyframes welcomeRise{from{opacity:.25;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+}
 </style></head>
-<body><section class="royal-entry scene door-scene" id="royalEntry"><div class="ceiling"></div><div class="gate-scene-title">॥ Shri Ganeshaya Namah ॥</div><div class="gate" id="royalGate"><div class="gate-inside">Shivam &amp; Vidhi<span>22 NOVEMBER 2026</span></div><div class="door left"><div class="carved-panel"><div class="carved-crown">❖</div><svg aria-hidden="true" class="carving" viewbox="0 0 160 360"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M80 20 C14 36 8 78 25 110 C43 140 56 125 80 152 C104 125 117 140 135 110 C152 78 146 36 80 20Z" stroke-width="5"></path><path d="M80 35 C36 46 28 76 44 98 Q61 115 80 131 Q99 115 116 98 C132 76 124 46 80 35Z" stroke-width="2.5"></path><path d="M80 46 V130 M80 76 C48 50 39 72 57 88 C71 100 80 91 80 76 M80 76 C112 50 121 72 103 88 C89 100 80 91 80 76" stroke-width="3"></path><path d="M80 165 C22 179 18 233 80 252 C142 233 138 179 80 165Z M80 177 C43 188 40 218 80 237 C120 218 117 188 80 177Z" stroke-width="3"></path><path d="M80 185 C54 198 61 219 80 226 C99 219 106 198 80 185Z M80 191 V224" stroke-width="2.5"></path><path d="M20 271 Q80 240 140 271 M20 282 Q80 252 140 282 M80 281 V334" stroke-width="4"></path><path d="M37 298 Q60 283 80 310 Q100 283 123 298 M37 314 Q60 299 80 327 Q100 299 123 314" stroke-width="2"></path></g><g fill="currentColor"><circle cx="80" cy="20" r="5"></circle><circle cx="80" cy="154" r="4"></circle><circle cx="80" cy="257" r="4"></circle><circle cx="80" cy="342" r="5"></circle></g></svg><div class="carved-base">✦ ❖ ✦</div></div><span aria-hidden="true" class="door-handle"><span class="handle-rosette"></span><span class="handle-ring"></span><span class="handle-drop"></span></span></div><div class="door right"><div class="carved-panel"><div class="carved-crown">❖</div><svg aria-hidden="true" class="carving" viewbox="0 0 160 360"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M80 20 C14 36 8 78 25 110 C43 140 56 125 80 152 C104 125 117 140 135 110 C152 78 146 36 80 20Z" stroke-width="5"></path><path d="M80 35 C36 46 28 76 44 98 Q61 115 80 131 Q99 115 116 98 C132 76 124 46 80 35Z" stroke-width="2.5"></path><path d="M80 46 V130 M80 76 C48 50 39 72 57 88 C71 100 80 91 80 76 M80 76 C112 50 121 72 103 88 C89 100 80 91 80 76" stroke-width="3"></path><path d="M80 165 C22 179 18 233 80 252 C142 233 138 179 80 165Z M80 177 C43 188 40 218 80 237 C120 218 117 188 80 177Z" stroke-width="3"></path><path d="M80 185 C54 198 61 219 80 226 C99 219 106 198 80 185Z M80 191 V224" stroke-width="2.5"></path><path d="M20 271 Q80 240 140 271 M20 282 Q80 252 140 282 M80 281 V334" stroke-width="4"></path><path d="M37 298 Q60 283 80 310 Q100 283 123 298 M37 314 Q60 299 80 327 Q100 299 123 314" stroke-width="2"></path></g><g fill="currentColor"><circle cx="80" cy="20" r="5"></circle><circle cx="80" cy="154" r="4"></circle><circle cx="80" cy="257" r="4"></circle><circle cx="80" cy="342" r="5"></circle></g></svg><div class="carved-base">✦ ❖ ✦</div></div><span aria-hidden="true" class="door-handle"><span class="handle-rosette"></span><span class="handle-ring"></span><span class="handle-drop"></span></span></div></div><button class="enter" id="royalOpenBtn" type="button">✦ OPEN INVITATION ✦</button></section><main class="shell">
+<body><section class="royal-entry scene door-scene" id="royalEntry"><div class="ceiling"></div><div class="gate-scene-title">॥ Shri Ganeshaya Namah ॥</div><div class="gate" id="royalGate"><div class="gate-inside">Shivam &amp; Vidhi<span>22 NOVEMBER 2026</span></div><div class="door left"><div class="carved-panel"><div class="carved-crown">❖</div><svg aria-hidden="true" class="carving" viewbox="0 0 160 360"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M80 20 C14 36 8 78 25 110 C43 140 56 125 80 152 C104 125 117 140 135 110 C152 78 146 36 80 20Z" stroke-width="5"></path><path d="M80 35 C36 46 28 76 44 98 Q61 115 80 131 Q99 115 116 98 C132 76 124 46 80 35Z" stroke-width="2.5"></path><path d="M80 46 V130 M80 76 C48 50 39 72 57 88 C71 100 80 91 80 76 M80 76 C112 50 121 72 103 88 C89 100 80 91 80 76" stroke-width="3"></path><path d="M80 165 C22 179 18 233 80 252 C142 233 138 179 80 165Z M80 177 C43 188 40 218 80 237 C120 218 117 188 80 177Z" stroke-width="3"></path><path d="M80 185 C54 198 61 219 80 226 C99 219 106 198 80 185Z M80 191 V224" stroke-width="2.5"></path><path d="M20 271 Q80 240 140 271 M20 282 Q80 252 140 282 M80 281 V334" stroke-width="4"></path><path d="M37 298 Q60 283 80 310 Q100 283 123 298 M37 314 Q60 299 80 327 Q100 299 123 314" stroke-width="2"></path></g><g fill="currentColor"><circle cx="80" cy="20" r="5"></circle><circle cx="80" cy="154" r="4"></circle><circle cx="80" cy="257" r="4"></circle><circle cx="80" cy="342" r="5"></circle></g></svg><div class="carved-base">✦ ❖ ✦</div></div><span aria-hidden="true" class="door-handle"><span class="handle-rosette"></span><span class="handle-ring"></span><span class="handle-drop"></span></span></div><div class="door right"><div class="carved-panel"><div class="carved-crown">❖</div><svg aria-hidden="true" class="carving" viewbox="0 0 160 360"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M80 20 C14 36 8 78 25 110 C43 140 56 125 80 152 C104 125 117 140 135 110 C152 78 146 36 80 20Z" stroke-width="5"></path><path d="M80 35 C36 46 28 76 44 98 Q61 115 80 131 Q99 115 116 98 C132 76 124 46 80 35Z" stroke-width="2.5"></path><path d="M80 46 V130 M80 76 C48 50 39 72 57 88 C71 100 80 91 80 76 M80 76 C112 50 121 72 103 88 C89 100 80 91 80 76" stroke-width="3"></path><path d="M80 165 C22 179 18 233 80 252 C142 233 138 179 80 165Z M80 177 C43 188 40 218 80 237 C120 218 117 188 80 177Z" stroke-width="3"></path><path d="M80 185 C54 198 61 219 80 226 C99 219 106 198 80 185Z M80 191 V224" stroke-width="2.5"></path><path d="M20 271 Q80 240 140 271 M20 282 Q80 252 140 282 M80 281 V334" stroke-width="4"></path><path d="M37 298 Q60 283 80 310 Q100 283 123 298 M37 314 Q60 299 80 327 Q100 299 123 314" stroke-width="2"></path></g><g fill="currentColor"><circle cx="80" cy="20" r="5"></circle><circle cx="80" cy="154" r="4"></circle><circle cx="80" cy="257" r="4"></circle><circle cx="80" cy="342" r="5"></circle></g></svg><div class="carved-base">✦ ❖ ✦</div></div><span aria-hidden="true" class="door-handle"><span class="handle-rosette"></span><span class="handle-ring"></span><span class="handle-drop"></span></span></div><button class="enter" id="royalOpenBtn" type="button">✦ OPEN INVITATION ✦</button></div></section><main class="shell">
 <!-- Decorative vector floral corner: editable SVG symbol, no external image dependency -->
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="floral-corner" viewbox="0 0 300 300"><path d="M0 245Q70 175 110 90T260 0M0 165Q45 105 85 0M0 290Q130 225 215 120" fill="none" stroke="#527958" stroke-width="5"></path><g fill="#668c5a"><ellipse cx="75" cy="143" rx="14" ry="31" transform="rotate(-45 75 143)"></ellipse><ellipse cx="120" cy="95" rx="13" ry="29" transform="rotate(35 120 95)"></ellipse><ellipse cx="161" cy="52" rx="12" ry="26" transform="rotate(-40 161 52)"></ellipse><ellipse cx="55" cy="210" rx="13" ry="27" transform="rotate(45 55 210)"></ellipse><ellipse cx="185" cy="150" rx="12" ry="25" transform="rotate(-50 185 150)"></ellipse></g><g transform="translate(75 58)"><g fill="#cf5c78"><ellipse cy="-29" rx="17" ry="32"></ellipse><ellipse cy="29" rx="17" ry="32"></ellipse><ellipse cx="29" rx="32" ry="17"></ellipse><ellipse cx="-29" rx="32" ry="17"></ellipse></g><circle fill="#f5bd59" r="17"></circle><circle fill="#88434d" r="7"></circle></g><g transform="translate(205 36) scale(.72)"><g fill="#e89c56"><ellipse cy="-29" rx="17" ry="32"></ellipse><ellipse cy="29" rx="17" ry="32"></ellipse><ellipse cx="29" rx="32" ry="17"></ellipse><ellipse cx="-29" rx="32" ry="17"></ellipse></g><circle fill="#f8d68d" r="17"></circle></g><g transform="translate(42 245) scale(.8)"><g fill="#b765a4"><ellipse cy="-29" rx="17" ry="32"></ellipse><ellipse cy="29" rx="17" ry="32"></ellipse><ellipse cx="29" rx="32" ry="17"></ellipse><ellipse cx="-29" rx="32" ry="17"></ellipse></g><circle fill="#eec36d" r="17"></circle></g><g fill="#dca45c"><circle cx="143" cy="115" r="6"></circle><circle cx="160" cy="128" r="4"></circle><circle cx="104" cy="205" r="5"></circle></g></symbol></defs></svg>
 <div class="gujarati-strip">✿ શુભ પ્રસંગ ✿   •   A JOYOUS BEGINNING   •   ✿ શુભ પ્રસંગ ✿</div>
@@ -225,7 +259,19 @@ if(GOOGLE_SCRIPT_URL){
  var button=document.getElementById('royalOpenBtn');
  if(!entry||!gate||!button)return;
  var opened=false;
- function finish(){entry.classList.add('completed');document.body.classList.add('invitation-open');}
+ function finish(){
+   if(entry.classList.contains('completed'))return;
+   entry.classList.add('completed');
+   document.body.classList.add('invitation-open');
+   // After the doors reveal the couple's names, bring the welcome section into view.
+   var welcome=document.getElementById('home');
+   if(welcome){
+     requestAnimationFrame(function(){
+       window.scrollTo({top:Math.max(0,welcome.getBoundingClientRect().top+window.scrollY),behavior:'auto'});
+       welcome.classList.add('welcome-arrived');
+     });
+   }
+ }
  function open(){if(opened)return;opened=true;gate.classList.add('open');button.textContent='Opening invitation…';setTimeout(finish,2200);}
  button.addEventListener('click',open);
  gate.addEventListener('click',open);
